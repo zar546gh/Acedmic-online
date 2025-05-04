@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ایکاڈیمی آنلائن - آسان و بہترین آن لائن تعلیمی پلیٹ فارم</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-color: #f0f9ff;
+        }
+        
+        .english-text {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .quote-box {
+            border-right: 4px solid #3b82f6;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom form styling */
+        .form-input {
+            border: 1px solid #e5e7eb;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+
+        /* For PDF export optimization */
+        @media print {
+            .page-break {
+                display: block;
+                height: 0;
+                page-break-before: avoid;
+                margin: 0;
+                border-top: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-blue-600">ایکاڈیمی آنلائن</div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative ml-4">
+                    <button class="text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="space-x-3">
+                    <button class="english-text bg-white text-blue-600 px-4 py-2 rounded-md border border-blue-600 hover:bg-blue-50">
+                        Log In
+                    </button>
+                    <button class="english-text bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">آن لائن تعلیم کا نیا دور</h1>
+            <p class="text-xl mb-8">اپنی منزل کی طرف پہلا قدم، گھر بیٹھے دنیا کی بہترین تعلیم حاصل کریں</p>
+            <div class="flex justify-center space-x-4">
+                <button class="english-text bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50">
+                    مفت رجسٹریشن
+                </button>
+                <button class="english-text bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                    ویڈیو لیکچرز
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Quote -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="quote-box bg-blue-50 p-6 rounded-lg shadow-sm max-w-3xl mx-auto">
+                <p class="text-xl text-blue-800 mb-2">"علم حاصل کرنا ہر مسلمان پر فرض ہے۔"</p>
+                <p class="text-gray-600 text-left">- حدیث شریف</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">ہمارے مضامین</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Mathematics -->
+                <div class="bg-blue-50 rounded-lg shadow-sm p-6 transition duration-300 card-hover">
+                    <div class="text-blue-600 text-5xl mb-4 text-center">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">ریاضی</h3>
+                    <p class="text-gray-600 text-center">جبر، حساب، ہندسہ، اور مزید موضوعات مشہور اساتذہ سے سیکھیں</p>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">
+                            کورسز دیکھیں <i class="fas fa-arrow-left mr-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Science -->
+                <div class="bg-blue-50 rounded-lg shadow-sm p-6 transition duration-300 card-hover">
+                    <div class="text-blue-600 text-5xl mb-4 text-center">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">سائنس</h3>
+                    <p class="text-gray-600 text-center">طبیعیات، کیمیا، حیاتیات، اور جدید سائنسی موضوعات</p>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">
+                            کورسز دیکھیں <i class="fas fa-arrow-left mr-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- English -->
+                <div class="bg-blue-50 rounded-lg shadow-sm p-6 transition duration-300 card-hover">
+                    <div class="text-blue-600 text-5xl mb-4 text-center">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">انگریزی</h3>
+                    <p class="text-gray-600 text-center">گرامر، مکالمہ، تحریر اور علمی انگریزی کی تیاری</p>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">
+                            کورسز دیکھیں <i class="fas fa-arrow-left mr-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Islamic Studies -->
+                <div class="bg-blue-50 rounded-lg shadow-sm p-6 transition duration-300 card-hover">
+                    <div class="text-blue-600 text-5xl mb-4 text-center">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">اسلامیات</h3>
+                    <p class="text-gray-600 text-center">قرآن، حدیث، فقہ، اور اسلامی تاریخ</p>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">
+                            کورسز دیکھیں <i class="fas fa-arrow-left mr-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Lectures Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">ویڈیو لیکچرز</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Video Lecture 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden transition duration-300 card-hover">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-6xl text-blue-600 opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full english-text">MATHS</span>
+                            <span class="text-gray-500 text-sm">45 منٹ</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">جبر کے بنیادی اصول</h3>
+                        <p class="text-gray-600 mb-4">اس لیکچر میں، آپ جبر کے بنیادی اصولوں کو سیکھیں گے، جس سے آپ کو پیچیدہ ریاضی کے مسائل حل کرنے میں مدد ملے گی۔</p>
+                        <div class="flex items-center">
+                            <img src="https://placeholder.pics/svg/40/3B82F6/FFFFFF/استاد" class="rounded-full w-10 h-10 mr-3" alt="استاد">
+                            <span class="text-sm text-gray-600">پروفیسر احمد علی</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Lecture 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden transition duration-300 card-hover">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-6xl text-blue-600 opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full english-text">SCIENCE</span>
+                            <span class="text-gray-500 text-sm">60 منٹ</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">نیوٹن کے حرکت کے قوانین</h3>
+                        <p class="text-gray-600 mb-4">طبیعیات کے بنیادی اصولوں میں سے نیوٹن کے حرکت کے تین قوانین اور ان کی روزمرہ زندگی میں اہمیت</p>
+                        <div class="flex items-center">
+                            <img src="https://placeholder.pics/svg/40/3B82F6/FFFFFF/استاد" class="rounded-full w-10 h-10 mr-3" alt="استاد">
+                            <span class="text-sm text-gray-600">ڈاکٹر سارہ خان</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Lecture 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden transition duration-300 card-hover">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-6xl text-blue-600 opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full english-text">ISLAMIC</span>
+                            <span class="text-gray-500 text-sm">55 منٹ</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">قرآن مجید کا تعارف</h3>
+                        <p class="text-gray-600 mb-4">قرآن مجید کی تاریخ، اس کی تدوین اور اس کی بنیادی تعلیمات کے بارے میں معلومات</p>
+                        <div class="flex items-center">
+                            <img src="https://placeholder.pics/svg/40/3B82F6/FFFFFF/استاد" class="rounded-full w-10 h-10 mr-3" alt="استاد">
+                            <span class="text-sm text-gray-600">مولانا عبدالرحمن</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                    مزید ویڈیو لیکچرز دیکھیں
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assignments Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">اسائنمنٹس</h2>
+            <div class="bg-blue-50 rounded-lg shadow-sm p-8 max-w-3xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6 text-center">اسائنمنٹ اپلوڈ کریں</h3>
+                
+                <form class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-gray-700">مضمون کا انتخاب کریں</label>
+                        <select class="w-full form-input bg-white">
+                            <option>ریاضی</option>
+                            <option>سائنس</option>
+                            <option>انگریزی</option>
+                            <option>اسلامیات</option>
+                        </select>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="block text-gray-700">اسائنمنٹ کا عنوان</label>
+                        <input type="text" class="w-full form-input bg-white" placeholder="عنوان درج کریں">
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="block text-gray-700">تفصیل</label>
+                        <textarea class="w-full form-input bg-white h-32" placeholder="اسائنمنٹ کی تفصیل لکھیں"></textarea>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="block text-gray-700">فائل اپلوڈ کریں</label>
+                        <div class="border-2 border-dashed border-blue-300 rounded-lg p-6 text-center bg-white">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-3"></i>
+                            <p class="text-gray-500">اپنی فائل یہاں ڈراپ کریں یا <span class="text-blue-600">فائل منتخب کریں</span></p>
+                            <p class="text-xs text-gray-400 mt-2 english-text">PDF, DOCX, JPG (Max: 10MB)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 english-text">
+                            Submit Assignment
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Classes Schedule -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">لائیو کلاسز شیڈول</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="px-6 py-3 english-text">Day</th>
+                            <th class="px-6 py-3">مضمون</th>
+                            <th class="px-6 py-3">استاد</th>
+                            <th class="px-6 py-3 english-text">Time</th>
+                            <th class="px-6 py-3">کلاس لنک</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-blue-50">
+                            <td class="px-6 py-4 english-text">Monday</td>
+                            <td class="px-6 py-4">ریاضی - کیلکولس</td>
+                            <td class="px-6 py-4">پروفیسر احمد علی</td>
+                            <td class="px-6 py-4 english-text">10:00 AM - 11:30 AM</td>
+                            <td class="px-6 py-4"><button class="bg-green-500 text-white px-4 py-2 rounded english-text">Join</button></td>
+                        </tr>
+                        <tr class="hover:bg-blue-50">
+                            <td class="px-6 py-4 english-text">Monday</td>
+                            <td class="px-6 py-4">سائنس - طبیعیات</td>
+                            <td class="px-6 py-4">ڈاکٹر سارہ خان</td>
+                            <td class="px-6 py-4 english-text">01:00 PM - 02:30 PM</td>
+                            <td class="px-6 py-4"><button class="bg-green-500 text-white px-4 py-2 rounded english-text">Join</button></td>
+                        </tr>
+                        <tr class="hover:bg-blue-50">
+                            <td class="px-6 py-4 english-text">Tuesday</td>
+                            <td class="px-6 py-4">انگریزی - گرامر</td>
+                            <td class="px-6 py-4">پروفیسر زاہد حسین</td>
+                            <td class="px-6 py-4 english-text">09:00 AM - 10:30 AM</td>
+                            <td class="px-6 py-4"><button class="bg-green-500 text-white px-4 py-2 rounded english-text">Join</button></td>
+                        </tr>
+                        <tr class="hover:bg-blue-50">
+                            <td class="px-6 py-4 english-text">Wednesday</td>
+                            <td class="px-6 py-4">اسلامیات - قرآن مجید</td>
+                            <td class="px-6 py-4">مولانا عبدالرحمن</td>
+                            <td class="px-6 py-4 english-text">11:00 AM - 12:30 PM</td>
+                            <td class="px-6 py-4"><button class="bg-green-500 text-white px-4 py-2 rounded english-text">Join</button></td>
+                        </tr>
+                        <tr class="hover:bg-blue-50">
+                            <td class="px-6 py-4 english-text">Thursday</td>
+                            <td class="px-6 py-4">سائنس - کیمیا</td>
+                            <td class="px-6 py-4">ڈاکٹر عباس علی</td>
+                            <td class="px-6 py-4 english-text">02:00 PM - 03:30 PM</td>
+                            <td class="px-6 py-4"><button class="bg-green-500 text-white px-4 py-2 rounded english-text">Join</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
+                    مکمل شیڈول دیکھیں
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspirational Quotes Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">الہامی اقوال</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Hadith Quote 1 -->
+                <div class="quote-box bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-xl text-blue-800 mb-2">"جو شخص علم کی تلاش میں نکلتا ہے، اللہ تعالی اس کے لیے جنت کا راستہ آسان کر دیتا ہے۔"</p>
+                    <p class="text-gray-600 text-left">- حدیث شریف، صحیح مسلم</p>
+                </div>
+
+                <!-- Motivational Quote 1 -->
+                <div class="quote-box bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-xl text-blue-800 mb-2">"نوجوانوں میں علم کا دیا جلاؤ، یہی ہماری قوم کا مستقبل ہے۔"</p>
+                    <p class="text-gray-600 text-left">- علامہ اقبال</p>
+                </div>
+
+                <!-- Hadith Quote 2 -->
+                <div class="quote-box bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-xl text-blue-800 mb-2">"علم کی فضیلت عبادت کی فضیلت سے بہتر ہے اور دین کی بنیاد تقویٰ ہے۔"</p>
+                    <p class="text-gray-600 text-left">- حدیث شریف، سنن ابن ماجہ</p>
+                </div>
+
+                <!-- Motivational Quote 2 -->
+                <div class="quote-box bg-blue-50 p-6 rounded-lg shadow-sm">
+                    <p class="text-xl text-blue-800 mb-2">"تعلیم ایک روشنی ہے جو آپ کو اندھیرے میں بھی راستہ دکھاتی ہے۔"</p>
+                    <p class="text-gray-600 text-left">- قاعدہ حیات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration/Login Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">آج ہی رجسٹر کریں</h2>
+                    <p class="text-xl mb-6">اپنی تعلیمی سفر کا آغاز کریں اور دنیا کے بہترین اساتذہ سے سیکھیں</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>نامور اساتذہ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>24/7 سپورٹ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>معیاری مواد</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>مفت سرٹیفکیٹ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-6">
+                        <button class="px-4 py-2 border-b-2 border-blue-600 text-blue-600 font-semibold english-text">Sign Up</button>
+                        <button class="px-4 py-2 text-gray-400 english-text">Login</button>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">نام</label>
+                            <input type="text" class="w-full form-input" placeholder="اپنا نام درج کریں">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 english-text">Email</label>
+                            <input type="email" class="w-full form-input" placeholder="email@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 english-text">Password</label>
+                            <input type="password" class="w-full form-input" placeholder="********">
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="terms" class="mr-2">
+                            <label for="terms" class="text-sm text-gray-600">میں قوانین و ضوابط سے متفق ہوں</label>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 english-text">
+                            Create Account
+                        </button>
+                    </form>
+                    <p class="text-center text-sm text-gray-600 mt-6">
+                        پہلے سے اکاؤنٹ ہے؟ <a href="#" class="text-blue-600 hover:underline">لاگ ان کریں</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ایکاڈیمی آنلائن</h3>
+                    <p class="text-gray-400 mb-4">آسان و بہترین آن لائن تعلیمی پلیٹ فارم جہاں آپ اپنی رفتار سے سیکھ سکتے ہیں</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">مضامین</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">ریاضی</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">سائنس</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">انگریزی</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">اسلامیات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">کمپیوٹر سائنس</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">کوئک لنکس</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">ہمارے بارے میں</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ہمارے اساتذہ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">کورسز</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">رابطہ کریں</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white english-text">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">رابطہ کریں</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">123 ایکاڈیمی روڈ، اسلام آباد، پاکستان</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400 english-text">info@academyonline.edu.pk</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400 english-text">+92-51-1234567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ایکاڈیمی آنلائن۔ تمام حقوق محفوظ ہیں۔</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/js/all.min.js"></script>
+</body>
+</html>
